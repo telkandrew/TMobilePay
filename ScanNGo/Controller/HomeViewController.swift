@@ -13,10 +13,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewRightConstraint: NSLayoutConstraint!
     
-    var menuIcons: [UIImage] = [#imageLiteral(resourceName: "home-icon"), #imageLiteral(resourceName: "scan-n-go-icon"), #imageLiteral(resourceName: "alerts-icon"), #imageLiteral(resourceName: "billing-info"), #imageLiteral(resourceName: "usage-details-icon"),#imageLiteral(resourceName: "account-icon"), #imageLiteral(resourceName: "shop-icon"), #imageLiteral(resourceName: "location-icon"), #imageLiteral(resourceName: "settings-icon"), #imageLiteral(resourceName: "help-icon"),#imageLiteral(resourceName: "info-icon")]
-    var menuTitles : [String] = ["HOME", "SCAN N' GO", "ALERTS", "BILLING & PAYMENTS",
-                                 "USAGE & PLANS", "PROFILE SETTINGS", "CART",
-                                 "STORE LOCATOR", "APP SETTINGS", "HELP", "ABOUT"]
+    var menuIcons: [UIImage] = [#imageLiteral(resourceName: "home-icon"), #imageLiteral(resourceName: "scan-n-go-icon"), #imageLiteral(resourceName: "alerts-icon"), #imageLiteral(resourceName: "billing-info"), #imageLiteral(resourceName: "usage-details-icon"),#imageLiteral(resourceName: "account-icon"), #imageLiteral(resourceName: "shop-icon"), #imageLiteral(resourceName: "location-icon"), #imageLiteral(resourceName: "settings-icon"), #imageLiteral(resourceName: "help-icon"),#imageLiteral(resourceName: "info-icon"), #imageLiteral(resourceName: "logout-icon")]
+    var menuTitles : [String] = ["Home", "Magenta Pay", "Alerts", "Billing & Payments",
+                                 "Usage & Plans", "Profile Settings", "Cart",
+                                 "Store Locator", "App Settings", "Help", "About", "Logout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +82,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return 12
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

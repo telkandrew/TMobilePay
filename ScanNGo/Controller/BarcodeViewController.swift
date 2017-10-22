@@ -160,7 +160,8 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 
                 self.present(popup, animated: true, completion: nil)
             } else {
-                let alert = UIAlertController(title: "Sorry", message: "We could not find a T-Mobile product that matches the barcode specified.", preferredStyle: .alert)
+                let newCode: String = String(code.characters.dropFirst())
+                let alert = UIAlertController(title: "Whoops", message: "We could not find a T-Mobile product that matches the barcode specified (\(newCode)). If you know you have a valid barcode, please wait 20 seconds and try again.", preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "Thanks", style: .destructive, handler: nil)
                 alert.addAction(okayAction)
                 self.present(alert, animated: true, completion: {

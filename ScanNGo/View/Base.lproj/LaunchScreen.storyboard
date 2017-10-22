@@ -18,19 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-mobile-logo-650-430" translatesAutoresizingMaskIntoConstraints="NO" id="JnD-hf-Qvx">
-                                <rect key="frame" x="16" y="269" width="343" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="vxe-uP-vRM"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="t-mobile-splash-screen" translatesAutoresizingMaskIntoConstraints="NO" id="apF-zP-p8B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.78192240142063374" green="0.25005788094143855" blue="0.49249835705697892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="JnD-hf-Qvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CpW-8F-xLp"/>
-                            <constraint firstItem="JnD-hf-Qvx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="K7b-3a-cb1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JnD-hf-Qvx" secondAttribute="trailing" constant="16" id="xka-w4-SM5"/>
-                            <constraint firstItem="JnD-hf-Qvx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="y7C-Ub-n6h"/>
+                            <constraint firstItem="apF-zP-p8B" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5c6-3p-jc2"/>
+                            <constraint firstItem="apF-zP-p8B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jec-LX-5tT"/>
+                            <constraint firstItem="apF-zP-p8B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c7z-n1-aSW"/>
+                            <constraint firstItem="apF-zP-p8B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="frv-8K-bzx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="t-mobile-logo-650-430" width="650" height="430"/>
+        <image name="t-mobile-splash-screen" width="1080" height="1920"/>
     </resources>
 </document>
