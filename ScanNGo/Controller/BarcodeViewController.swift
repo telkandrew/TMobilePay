@@ -75,7 +75,6 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         backView.addSubview(menuButton)
         
         // Begin the capture session.
-        
         session.startRunning()
     }
     
@@ -85,8 +84,17 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if (session?.isRunning == false) {
             session.startRunning()
         }
+        
+        if CartProducts.products.isEmpty == false {
+            let checkoutButton = UIButton(frame: CGRect(x: self.view.frame.width - 90.0, y: self.view.frame.height - 90.0, width: 70.0, height: 70.0))
+            checkoutButton.setImage(#imageLiteral(resourceName: "shopping-cart-icon"), for: .normal)
+            checkoutButton.layer.cornerRadius = 35.0
+            checkoutButton.addTarget(self, action: #selector(goToCheckout), for: .touchUpInside)
+            checkoutButton.clipsToBounds = true
+            checkoutButton.backgroundColor = UIColor.clear
+            backView.addSubview(checkoutButton)
+        }
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -142,6 +150,11 @@ class BarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         vc.product = product
         self.navigationController?.pushViewController(vc, animated: true)
         return
+    }
+    
+    @objc func goToCheckout() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyCartViewController") as! MyCartViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func barcodeDetected(code: String) {
